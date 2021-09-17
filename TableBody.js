@@ -1,16 +1,21 @@
-const TableBody = () => {
+const TableBody = (props) => {
+    const rows = props.characterData.map((row, index) => {
+        return (
+            <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.job}</td>
+                <td>{row.age}</td>
+                <td>
+                    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+                </td>
+            </tr>
+        )
+    })
     return (
             <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Black</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>Ann</td>
-                    <td>White</td>
-                    <td>30</td>
-                </tr>
+                {rows}
             </tbody>
     )
 }
+
+export default TableBody

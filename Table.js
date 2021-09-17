@@ -1,31 +1,17 @@
 import React, {Component} from 'react'
+import TableBody from './TableBody'
+import TableHeader from './TableHeader'
 
-class Table extends Component {
-    render() {
+const Table = (props) => {
+    
+        const {characterData, removeCharacter} = props
         return (
             <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Age</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Black</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>Ann</td>
-                        <td>White</td>
-                        <td>30</td>
-                    </tr>
-                </tbody>
+                <TableHeader/>
+                <TableBody characterData={characterData} removeCharacter={removeCharacter}/>
             </table>
         )
     }
-}
+
 
 export default Table

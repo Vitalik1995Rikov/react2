@@ -1,9 +1,20 @@
 const TableHeader = () => {
     return (
         <thead>
-            <tr>Name</tr>
-            <tr>SurName</tr>
-            <tr>Age</tr>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Surname
+                </th>
+                <th>
+                    Age
+                </th>
+            </tr>
+            
         </thead>
     )
 }
+
+export default TableHeader;
