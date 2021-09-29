@@ -7,23 +7,7 @@ import { Component } from 'react';
 
 class App extends Component {
   state = {
-    characters: [
-      {
-        name: 'Charlie',
-        job: 'Janitor',
-        age: 30
-      },
-      {
-        name: 'Matt',
-        job: 'Lapic',
-        age: 21
-      },
-      {
-        name: 'Dungan',
-        job: 'Jordan',
-        age: 22
-      }
-    ]
+    characters: [],
   }
 
 removeCharacter = (index) => {
