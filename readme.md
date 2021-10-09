@@ -1,0 +1,3 @@
+* typescript (GURUFY)
+* REDUX (gurufy)
+* 
