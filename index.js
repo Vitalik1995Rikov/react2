@@ -1,21 +1,16 @@
-import React, {createContext, useContext} from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
+import { Provider } from "react-redux";
+import App from "./App";
 
-const testContext = createContext()
 
-const {Provider} = context
+import store from "./store";
 
-const TestComponent = () => {
-	const color = "#31c5b2"
-	const contextValue = {color}
-	
-	return (
-	<Provider value={contextValue}>
-		<div>Anything ...</div>
-	</Provider>
-	)
-}
-ReactDOM.render(
-    <App/>,
-  document.getElementById('root')
+ReactDom.render(
+	<React.StrictMode>
+		<Provider store={store}>
+			<App/>
+		</Provider>
+	</React.StrictMode>, 
+	document.getElementById("root")
 );
