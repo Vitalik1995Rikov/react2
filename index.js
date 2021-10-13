@@ -1,16 +1,35 @@
 import React from "react";
-import ReactDom from "react-dom";
-import { Provider } from "react-redux";
-import App from "./App";
+import ReactDOM from "react-dom";
 
+const ComponentA = () => {
+	return <div>Component A</div>
+}
 
-import store from "./store";
+const ComponentB = () => {
+	return <div>Component B</div>
+}
 
-ReactDom.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<App/>
-		</Provider>
-	</React.StrictMode>, 
+const ComponentC = () => {
+	return ReactDOM.createPortal(
+		<div>
+			Component C
+			<ComponentA/>
+			<ComponentB/>
+		</div>,
+		document.body
+	);
+};
+
+const ComponentD = () => {
+	return (
+		<div>
+			Component D
+			<ComponentC/>
+		</div>
+	)
+}
+
+ReactDOM.render(
+		<ComponentD/>, 
 	document.getElementById("root")
 );
