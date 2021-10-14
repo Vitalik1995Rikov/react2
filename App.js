@@ -1,14 +1,14 @@
-import Products from "./components/Products";
-import Basket from "./components/Basket";
-import "./App.css";
+import React, {Component} from "react";
+import Dropdown from "./Dropdown";
 
-function App() {
-    return (
-        <div className="app">
-            <Products/>
-            <Basket/>
-        </div>
-    )
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Dropdown/>
+            </div>
+        ) 
+    }
 }
 
 export default App;
