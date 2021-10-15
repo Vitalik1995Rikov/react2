@@ -1,14 +1,12 @@
-import React, {Component} from "react";
-import Dropdown from "./Dropdown";
+import React, {useState} from "react";
 
-class App extends Component {
-    render() {
+function Example() {
+    const [count, setCount] = useState(0);
         return (
             <div>
-                <Dropdown/>
+                <p>You clicked {count}</p>
+                <button onClick={() => setCount(count + 1)}>Push</button>
             </div>
-        ) 
-    }
+        )
 }
-
-export default App;
+export default Example;
